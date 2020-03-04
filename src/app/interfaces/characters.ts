@@ -1,4 +1,4 @@
-export interface ISW {
+export interface ICHARACTERS {
 
     count: number,
     next: string,

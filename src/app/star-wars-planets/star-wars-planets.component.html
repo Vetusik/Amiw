@@ -1,1 +1,13 @@
-<p>star-wars-planets works!</p>
+<input type='text' placeholder="Enter planet name" [(ngModel)]='userInput' (change)="inputChange()" />
+
+<div>
+    <p>Name: {{StarWars.results[0].name}}</p>
+    <p>Rotation period: {{StarWars.results[0].rotation_period}}</p>
+    <p>Orbital period: {{StarWars.results[0].orbital_period}}</p>
+    <p>Diameter: {{StarWars.results[0].diameter}}</p>
+    <p>Climate: {{StarWars.results[0].climate}}</p>
+    <p>Gravity: {{StarWars.results[0].gravity}}</p>
+    <p>Terrain: {{StarWars.results[0].terrain}}</p>
+    <p>Surface water: {{StarWars.results[0].surface_water}}</p>
+    <p>Population: {{StarWars.results[0].population}}</p>
+</div>

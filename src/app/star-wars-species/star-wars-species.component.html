@@ -1,1 +1,13 @@
-<p>star-wars-species works!</p>
+<input type='text' placeholder="Enter species name" [(ngModel)]='userInput' (change)="inputChange()" />
+
+<div>
+    <p>Name: {{StarWars.results[0].name}}</p>
+    <p>Classification: {{StarWars.results[0].classification}}</p>
+    <p>Designation: {{StarWars.results[0].designation}}</p>
+    <p>Average height: {{StarWars.results[0].average_height}}</p>
+    <p>Skin colors: {{StarWars.results[0].skin_colors}}</p>
+    <p>Hair colors: {{StarWars.results[0].hair_colors}}</p>
+    <p>Average lifespan: {{StarWars.results[0].average_lifespan}}</p>
+    <p>Language: {{StarWars.results[0].language}}</p>
+</div>
+
