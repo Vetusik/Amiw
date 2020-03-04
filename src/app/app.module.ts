@@ -10,13 +10,17 @@ import { NawigacjaComponent } from './nawigacja/nawigacja.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StarWarsContentComponent } from './star-wars-content/star-wars-content.component';
 import { StarWarsService } from './star-wars.service';
+import { StarWarsPlanetsComponent } from './star-wars-planets/star-wars-planets.component';
+import { StarWarsSpeciesComponent } from './star-wars-species/star-wars-species.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NawigacjaComponent,
     routingComponents,
-    StarWarsContentComponent
+    StarWarsContentComponent,
+    StarWarsPlanetsComponent,
+    StarWarsSpeciesComponent
   ],
   imports: [
     BrowserModule,
