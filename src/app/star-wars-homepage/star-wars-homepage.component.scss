@@ -1,11 +1,34 @@
+$sw-color: #ffc500;
+
 .bg {
-    background-image: url(src\assets\Data\SW-bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
+  background-color: black;
+  color: $sw-color;
 }
 
-.colorApi{
-    color: #EEDB00;
+.fit-image {
+  width: 100%;
+  object-fit: cover;
 }
+
+#colorApi {
+  color: $sw-color;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+
+ul {
+  list-style: none;
+
+  li:before {
+    content: "\2022";
+    color: #6c757d;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+  
+

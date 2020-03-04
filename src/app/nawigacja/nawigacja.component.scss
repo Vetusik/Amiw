@@ -1,18 +1,23 @@
-nav a:visited{
-    color:rgb(114, 113, 113);
+$sw-color: #ffc500;
+$grey: #727171;
+
+nav {
+  li {
+    a:visited {
+      color: $grey;
     }
-     
-nav a.active{
-        color: #EEDB00;
+  }
+  a:visited {
+    color: $grey;
+  }
+}
+nav {
+  li {
+    a.active {
+      color: $sw-color;
     }
-
-nav li a:visited{
-        color:rgb(114, 113, 113);
-        }
-         
-nav li a.active{
-            color: #EEDB00;
-        }
-
-
-
+  }
+  a.active {
+    color: $sw-color;
+  }
+}
