@@ -1,0 +1,33 @@
+<p>SarWars-wars-content iuworks!</p>
+
+<!-- {{StarWars.results[0].name}}
+{{StarWars.results[0].height}}
+{{StarWars.results[0].mass}}
+{{StarWars.results[0].hair_color}}
+{{StarWars.results[0].skin_color}}
+{{StarWars.results[0].eye_color}}
+{{StarWars.results[0].birth_year}}
+{{StarWars.results[0].gender}}
+{{StarWars.results[0].homeworld}}
+{{StarWars.results[0].species}}
+{{StarWars.results[0].vehicles}}
+{{StarWars.results[0].SarWarsships}} 
+{{StarWars.results[0].results.name}} -->
+
+<input type='text' [(ngModel)]='userInput' (change)="inputChange()" />
+
+
+<div>
+    <p>Name: {{StarWars.results[0].name}}</p>
+    <p>Height: {{StarWars.results[0].height}}</p>
+    <p>Mass: {{StarWars.results[0].mass}}</p>
+    <p>Hair: {{StarWars.results[0].hair_color}}</p>
+    <p>Skin: {{StarWars.results[0].skin_color}}</p>
+    <p>Eyes: {{StarWars.results[0].eye_color}}</p>
+    <p>Birth:{{StarWars.results[0].birth_year}}</p>
+    <p>Gender: {{StarWars.results[0].gender}}</p>
+</div>
+
+<div>
+    <p>URL: {{Images.hits[0].userImageURL}}</p>
+</div>
