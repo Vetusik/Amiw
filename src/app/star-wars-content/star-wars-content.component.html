@@ -1,12 +1,22 @@
-<input type='text' placeholder="Enter character name" [(ngModel)]='userInput' (change)="inputChange()" />
+<div class="mb-5 mt-5 d-flex justify-content-center">
+    <input type='text' placeholder="Enter character name" [(ngModel)]='userInput' (keydown)="inputChange($event)" (keyup)="save()" />
+</div>
 
-<div>
-    <p>Name: {{StarWars.results[0].name}}</p>
-    <p>Height: {{StarWars.results[0].height}}</p>
-    <p>Mass: {{StarWars.results[0].mass}}</p>
-    <p>Hair: {{StarWars.results[0].hair_color}}</p>
-    <p>Skin: {{StarWars.results[0].skin_color}}</p>
-    <p>Eyes: {{StarWars.results[0].eye_color}}</p>
-    <p>Birth: {{StarWars.results[0].birth_year}}</p>
-    <p>Gender: {{StarWars.results[0].gender}}</p>
+<div class="d-flex justify-content-center">
+    <div class="mt-5 col-12">
+        <div class="row">
+            <div class="col-2 offset-4">
+                <p>Name: {{StarWars.results[0].name}}</p>
+                <p>Height: {{StarWars.results[0].height}}</p>
+                <p>Mass: {{StarWars.results[0].mass}}</p>
+                <p>Hair: {{StarWars.results[0].hair_color}}</p>
+            </div>
+            <div class="col-2">
+                <p>Skin: {{StarWars.results[0].skin_color}}</p>
+                <p>Eyes: {{StarWars.results[0].eye_color}}</p>
+                <p>Birth: {{StarWars.results[0].birth_year}}</p>
+                <p>Gender: {{StarWars.results[0].gender}}</p>
+            </div>
+        </div>
+    </div>
 </div>

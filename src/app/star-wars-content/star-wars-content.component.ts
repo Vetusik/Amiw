@@ -30,7 +30,11 @@ export class StarWarsContentComponent implements OnInit {
   ngOnInit() {
   }
 
-  inputChange() {
+public dupa = "elo";
+
+  inputChange(event) {
+
+    if (event.key === "Enter") {
     this.userInputPiped = this.urlPipe.transform(this.userInput);
     this._StarWars.getStarWarsCharacter(this.url + this.userInputPiped).subscribe(
       {
@@ -38,6 +42,16 @@ export class StarWarsContentComponent implements OnInit {
         error: err => this.errorMessage = err
       });
 
-    console.log(this.userInputPiped);
+    console.log(this.dupa);
+    console.log(this.StarWars);
+    console.log(this.StarWars.results);
+    }
   }
+
+  save(){
+      sessionStorage.setItem('operation', JSON.stringify(this.dupa));
+      sessionStorage.setItem('name', JSON.stringify(this.StarWars.results[0]));
+  }
+
+
 }
