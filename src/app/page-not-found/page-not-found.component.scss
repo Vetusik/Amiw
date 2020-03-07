@@ -1,0 +1,98 @@
+$sw-color: #ffc500;
+$orginal: #16a085;
+
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+		background:black;
+	}
+.st0{font-family:'Oxanium';}
+.st1{font-size:10vh;}
+.st2{fill:gray;}
+
+svg{
+  width: 100%;
+    height: 300px;
+    text-align: center;
+    fill: $sw-color;
+}
+path#XMLID_5_ {
+   
+    fill: $sw-color;
+    filter: url(#blurFilter4);
+}
+path#XMLID_11_ ,path#XMLID_2_ {
+    fill: $sw-color;
+}
+.circle{
+  animation: out 2s infinite ease-out;
+  fill: $sw-color;
+}
+
+#container{
+  text-align:center;
+}
+.message{
+	color:$sw-color;
+}
+.message:after{
+	content:"]";
+}
+.message:before{
+	content:"[";
+}
+
+.message:after, .message:before {
+  
+  color: $sw-color;
+  font-size: 20px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          margin:0 50px;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  0% {r:1;  opacity: 0.9 ;}
+  25%{r:5;  opacity: 0.3 ;}
+  50%{r:10; opacity: 0.2 ;}
+  75%{r:15;opacity:0.1;}
+ 	100% {r:20;opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+  
+  	
