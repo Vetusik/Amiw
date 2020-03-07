@@ -16,6 +16,8 @@ export class StarWarsContentComponent implements OnInit {
   public userInputPiped;
   public errorMessage: string;
   public apiResult = [];
+  public th = ["Name:", "Height:", "Mass:", "Hair:", "Skin color:", "Eye color:", "Birth year:", "Gender:"];
+  public apiLoaded = false;
 
   constructor(public _StarWars: StarWarsService, private urlPipe: UrlPipe) { }
 
@@ -40,29 +42,32 @@ export class StarWarsContentComponent implements OnInit {
         error: err => this.errorMessage = err
       });
 
-      console.log("1.Odpalam przypisywanie...");
-      this.test();
-      console.log("4.Wyszedłem z test()");
-
+    this.apiResult = this.StarWars.results;
+    this.apiLoaded = true;
   }
 
 
 
-  test() {
+  /*   test() {
+  
+      console.log("Jestem w test() na początku, przebieg = " + this.i);
+      console.log("Wywołuję: " + this.StarWars.next);
+    
+      https://swapi.co/api/people/?page=2&search=k
+      this.apiResult.push(this.StarWars.results);
+      if (this.StarWars.next != 'null') {
+        console.log("Jestem w srdoku, przebieg = " + this.i);
+        this._StarWars.getStarWarsCharacter(this.StarWars.next).subscribe(
+          {
+            next: data => { this.StarWars = data },
+            error: err => this.errorMessage = err
+          });
+        this.i++;
+        this.test();
+      }
+  
+      console.log("Skończyłem test() wyświetlam co sie przypisało");
+      console.log(this.apiResult);
+    } */
 
-    console.log("2.Jestem w test() na początku");
-
-    this.apiResult.push(this.StarWars.results);
-    if (this.StarWars.next !== null) {
-      this._StarWars.getStarWarsCharacter(this.StarWars.next).subscribe(
-        {
-          next: data => { this.StarWars = data },
-          error: err => this.errorMessage = err
-        });
-      this.test();
-    }
-
-    console.log("3.Skończyłem test() wyświetlam co sie przypisało");
-    console.log(this.apiResult);
-  }
 }
