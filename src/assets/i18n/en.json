@@ -1,0 +1,31 @@
+{
+    "navbar": {
+        "navPeople": "People",
+        "navPlanets": "Planets",
+        "navSpecies": "Species",
+        "navHomeTitle": "Home"
+    },
+    "pageNotFound": {
+        "text": "Page not found"
+    },
+    "homePage": {
+        "text": "On this site You can search characters, planets and species from first six movies",
+        "footer_1": "Mikolaj Lewandowski 2020. Site uses",
+        "footer_2": "ICONS",
+        "footer_3": "and",
+        "footer_4": "as data source"
+    },
+    "peoplePage": {
+        "text": "Enter character name",
+        "tab": ["Name:", "Height:", "Mass:", "Hair:", "Skin color:", "Eye color:", "Birth year:", "Gender:"]
+    },
+    "planetsPage": {
+        "text": "Enter planet name",
+        "tab": ["Name:", "Rotation period:", "Orbital period:", "Diameter:", "Climate:", "Gravity:", "Terrain:", "Surface water:", "Population:"]
+    },
+    "speciesPage": {
+        "text": "Enter species name",
+        "tab": ["Name:", "Classification:", "Designation:", "Average height:", "Skin colors:", "Hair colors:", "Average lifespan:", "Languages:"]
+    }
+}
+

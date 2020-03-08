@@ -4,7 +4,7 @@
 
     </div>
     <div class="d-flex justify-content-center">
-        <p class="text-center">On this site You can search characters, planets and species from first six movies</p>
+        <p class="text-center">{{'homePage.text' | translate }}</p>
     </div>
     <div class="row text-center">
         <div class="col-md-4"> <i class="swg swg-ep1 swg-40vh"></i></div>
@@ -14,9 +14,13 @@
         <div class="col-md-4"> <i class="swg swg-ep5 swg-40vh"></i></div>
         <div class="col-md-4"> <i class="swg swg-ep6 swg-40vh"></i></div>
     </div>
-    <p class="text-secondary footer">Mikołaj Lewandowski 2020. Site uses <a
-            href="http://starwarsglyphicons.com">ICONS</a> and <a id="colorApi" href="https://swapi.co">SWAPI</a> as data
-        source </p>
+    <p class="text-secondary footer">
+        {{ 'homePage.footer_1' | translate }} 
+    <a href="http://starwarsglyphicons.com">{{ 'homePage.footer_2' | translate }}</a> 
+    {{ 'homePage.footer_3' | translate }}
+    <a id="colorApi" href="https://swapi.co">SWAPI</a> 
+    {{ 'homePage.footer_4' | translate }}
+    </p>
 </div>
 
 

@@ -1,0 +1,30 @@
+{
+    "navbar": {
+        "navPeople": "Postacie",
+        "navPlanets": "Planety",
+        "navSpecies": "Rasy",
+        "navHomeTitle": "Strona główna"
+    },
+    "pageNotFound": {
+        "text": "Nie odnaleziono strony"
+    },
+    "homePage": {
+        "text": "Na tej stronie możesz wyszukać postacie, planety oraz rasy przedstawione w pierszych sześciu filmach",
+        "footer_1": "Mikołaj Lewandowski 2020. Strona korzysta z",
+        "footer_2": "IKON",
+        "footer_3": "oraz",
+        "footer_4": "jako źródła danych"       
+    },   
+    "peoplePage": {
+        "text": "Wprowadź nazwę postaci",
+        "tab": ["Imię:", "Wzrost:", "Waga:", "Włosy:", "Kolor skóry:", "Kolor oczu:", "Rok urodzenia:", "Płeć:"]
+    },
+    "planetsPage": {
+        "text": "Wprowadź nazwę planety",
+        "tab": ["Nazwa:", "Cykl dnia:", "Cykl orbitalny:", "Średnica:", "Klimat:", "Grawitacja:", "Teren:", "Wodne pokrycie:", "Populacja:"]
+    },
+    "speciesPage": {
+        "text": "Wprowadź nazwę rasy",
+        "tab": ["Nazwa:", "Gromada:", "Inteligencja:", "Średni wzrost:", "Kolory skóry:", "Kolory włosów:", "Średnia długość życia:", "Języki:"]
+    }
+}
