@@ -1,13 +1,26 @@
-<input type='text' placeholder="Enter species name" [(ngModel)]='userInput' (change)="inputChange()" />
-
-<div>
-    <p>Name: {{StarWars.results[0].name}}</p>
-    <p>Classification: {{StarWars.results[0].classification}}</p>
-    <p>Designation: {{StarWars.results[0].designation}}</p>
-    <p>Average height: {{StarWars.results[0].average_height}}</p>
-    <p>Skin colors: {{StarWars.results[0].skin_colors}}</p>
-    <p>Hair colors: {{StarWars.results[0].hair_colors}}</p>
-    <p>Average lifespan: {{StarWars.results[0].average_lifespan}}</p>
-    <p>Language: {{StarWars.results[0].language}}</p>
+<div class="mb-3 mt-3 d-flex justify-content-center">
+    <input class="form-control col-10 col-sm-5 col-md-5 col-lg-2" type='text' placeholder="Enter species name" [(ngModel)]='userInput'
+        (keydown.enter)="inputChange($event)" />
 </div>
 
+<div class="table-responsive p-4" *ngIf="apiLoaded === true">
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr >
+            <th scope="col" *ngFor="let Title of th">{{Title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let Planet of StarWars.results">
+            <td> {{Planet.name}} </td>
+            <td> {{Planet.classification}}</td>
+            <td> {{Planet.designation}}</td>
+            <td> {{Planet.average_height}} &nbsp; cm</td>
+            <td> {{Planet.skin_colors}} </td>
+            <td> {{Planet.hair_colors}} </td>
+            <td> {{Planet.average_lifespan}} &nbsp; y</td>
+            <td> {{Planet.language}} </td>
+        </tr>
+    </tbody>
+    </table>
+</div>

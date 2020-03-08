@@ -1,13 +1,27 @@
-<input type='text' placeholder="Enter planet name" [(ngModel)]='userInput' (change)="inputChange()" />
+<div class="mb-3 mt-3 d-flex justify-content-center">
+    <input class="form-control col-10 col-sm-5 col-md-5 col-lg-2" type='text' placeholder="Enter planet name" [(ngModel)]='userInput'
+        (keydown.enter)="inputChange($event)" />
+</div>
 
-<div>
-    <p>Name: {{StarWars.results[0].name}}</p>
-    <p>Rotation period: {{StarWars.results[0].rotation_period}}</p>
-    <p>Orbital period: {{StarWars.results[0].orbital_period}}</p>
-    <p>Diameter: {{StarWars.results[0].diameter}}</p>
-    <p>Climate: {{StarWars.results[0].climate}}</p>
-    <p>Gravity: {{StarWars.results[0].gravity}}</p>
-    <p>Terrain: {{StarWars.results[0].terrain}}</p>
-    <p>Surface water: {{StarWars.results[0].surface_water}}</p>
-    <p>Population: {{StarWars.results[0].population}}</p>
+<div class="table-responsive p-4" *ngIf="apiLoaded === true">
+    <table class="table table-striped table-dark">
+        <thead>
+        <tr >
+            <th scope="col" *ngFor="let Title of th">{{Title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let Planet of StarWars.results">
+            <td> {{Planet.name}} </td>
+            <td> {{Planet.rotation_period}} &nbsp; h</td>
+            <td> {{Planet.orbital_period}} &nbsp; d</td>
+            <td> {{Planet.diameter}} &nbsp; km</td>
+            <td> {{Planet.climate}} </td>
+            <td> {{Planet.gravity}} </td>
+            <td> {{Planet.terrain}} </td>
+            <td> {{Planet.surface_water}} &nbsp; %</td>
+            <td> {{Planet.population}} </td>
+        </tr>
+    </tbody>
+    </table>
 </div>

@@ -15,6 +15,9 @@ export class StarWarsPlanetsComponent implements OnInit {
   public url = "https://swapi.co/api/planets/?search=";
   public userInputPiped;
   public errorMessage: string;
+  public apiResult = [];
+  public th = ["Name:", "Rotation period:", "Orbital period:", "Diameter:", "Climate:", "Gravity:", "Terrain:", "Surface water:", "Population:"];
+  public apiLoaded = false;
 
   constructor(public _StarWars: StarWarsService, private urlPipe: UrlPipe) { }
 
@@ -29,7 +32,7 @@ export class StarWarsPlanetsComponent implements OnInit {
   ngOnInit() {
   }
 
-  inputChange() {
+  inputChange(event) {
     this.userInputPiped = this.urlPipe.transform(this.userInput);
     this._StarWars.getStarWarsPlanet(this.url + this.userInputPiped).subscribe(
       {
@@ -37,6 +40,7 @@ export class StarWarsPlanetsComponent implements OnInit {
         error: err => this.errorMessage = err
       });
 
-    console.log(this.userInputPiped);
+      this.apiResult = this.StarWars.results;
+      this.apiLoaded = true;
   }
 }
