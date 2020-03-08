@@ -27,6 +27,9 @@
   line-height: 0.75em;
   vertical-align: -15%;
 }
+.swg-1p5x {
+  font-size: 1.5em;
+}
 .swg-2x {
   font-size: 2em;
 }
@@ -41,6 +44,9 @@
 }
 .swg-6x {
   font-size: 6em;
+}
+.swg-40vh{
+  font-size: 20vh;
 }
 .swg-fw {
   width: 1.28571429em;

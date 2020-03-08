@@ -1,22 +1,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/StarWarsHomepage" routerLinkActive="active">Home </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <a class="navbar-brand align-text-top" routerLink="/StarWarsHomepage" routerLinkActive="active" data-toggle="collapse"
+    data-target=".navbar-collapse.show" title="Home"><i class="swg swg-jediorder swg-2x"></i> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/StarWarsPeople" routerLinkActive="active">People </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/StarWarsPlanets" routerLinkActive="active">Planets </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/StarWarsSpecies" routerLinkActive="active">Species </a>
-        </li>
-      </ul>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/StarWarsPeople" routerLinkActive="active" data-toggle="collapse"
+          data-target=".navbar-collapse.show"><i class="swg swg-leia swg-1p5x"></i>&nbsp;People </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/StarWarsPlanets" routerLinkActive="active" data-toggle="collapse"
+          data-target=".navbar-collapse.show"><i class="swg swg-deathstar swg-1p5x"></i>&nbsp;Planets </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/StarWarsSpecies" routerLinkActive="active" data-toggle="collapse"
+          data-target=".navbar-collapse.show"><i class="swg swg-yoda-2 swg-1p5x"></i>&nbsp;Species </a>
+      </li>
+    </ul>
+  </div>
 
-    
-  </nav>
+
+</nav>
