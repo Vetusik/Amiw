@@ -13,18 +13,46 @@
         "footer_1": "Mikołaj Lewandowski 2020. Strona korzysta z",
         "footer_2": "IKON",
         "footer_3": "oraz",
-        "footer_4": "jako źródła danych"       
-    },   
+        "footer_4": "jako źródła danych"
+    },
     "peoplePage": {
         "text": "Wprowadź nazwę postaci",
-        "tab": ["Imię:", "Wzrost:", "Waga:", "Włosy:", "Kolor skóry:", "Kolor oczu:", "Rok urodzenia:", "Płeć:"]
+        "tab": {
+            "Name": "Imię",
+            "Height": "Wzrost",
+            "Mass": "Waga",
+            "Hair": "Włosy",
+            "Skin-color": "Kolor skóry",
+            "Eye-color": "Kolor oczu",
+            "Birth-year": "Rok urodzenia",
+            "Gender": "Płeć"
+        }
     },
     "planetsPage": {
         "text": "Wprowadź nazwę planety",
-        "tab": ["Nazwa:", "Cykl dnia:", "Cykl orbitalny:", "Średnica:", "Klimat:", "Grawitacja:", "Teren:", "Wodne pokrycie:", "Populacja:"]
+        "tab": {
+            "Name": "Nazwa",
+            "Rotation-period": "Cykl dnia",
+            "Orbital-period": "Cykl orbitalny",
+            "Diameter": "Średnica",
+            "Climate": "Klimat",
+            "Gravity": "Grawitacja",
+            "Terrain": "Teren",
+            "Surface-water": "Wodne pokrycie",
+            "Population": "Populacja"
+        }
     },
     "speciesPage": {
         "text": "Wprowadź nazwę rasy",
-        "tab": ["Nazwa:", "Gromada:", "Inteligencja:", "Średni wzrost:", "Kolory skóry:", "Kolory włosów:", "Średnia długość życia:", "Języki:"]
+        "tab": {
+            "Name": "Nazwa",
+            "Classification": "Gromada",
+            "Designation": "Inteligencja",
+            "Average-height": "Średni wzrost",
+            "Skin-colors": "Kolory skóry",
+            "Hair-colors": "Kolory włosów",
+            "Average-lifespan": "Średnia długość życia",
+            "Languages": "Języki"
+        }
     }
 }

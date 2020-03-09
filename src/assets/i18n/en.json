@@ -17,15 +17,42 @@
     },
     "peoplePage": {
         "text": "Enter character name",
-        "tab": ["Name:", "Height:", "Mass:", "Hair:", "Skin color:", "Eye color:", "Birth year:", "Gender:"]
+        "tab": {
+            "Name": "Name",
+            "Height": "Height",
+            "Mass": "Mass",
+            "Hair": "Hair",
+            "Skin-color": "Skin color",
+            "Eye-color": "Eye color",
+            "Birth-year": "Birth year",
+            "Gender": "Gender"
+        }
     },
     "planetsPage": {
         "text": "Enter planet name",
-        "tab": ["Name:", "Rotation period:", "Orbital period:", "Diameter:", "Climate:", "Gravity:", "Terrain:", "Surface water:", "Population:"]
+        "tab": {
+            "Name": "Name",
+            "Rotation-period": "Rotation period",
+            "Orbital-period": "Orbital period",
+            "Diameter": "Diameter",
+            "Climate": "Climate",
+            "Gravity": "Gravity",
+            "Terrain": "Terrain",
+            "Surface-water": "Surface water",
+            "Population": "Population"
+        }
     },
     "speciesPage": {
         "text": "Enter species name",
-        "tab": ["Name:", "Classification:", "Designation:", "Average height:", "Skin colors:", "Hair colors:", "Average lifespan:", "Languages:"]
+        "tab": {
+            "Name": "Name",
+            "Classification": "Classification",
+            "Designation": "Designation",
+            "Average-height": "Average height",
+            "Skin-colors": "Skin colors",
+            "Hair-colors": "Hair colors",
+            "Average-lifespan": "Average lifespan",
+            "Languages": "Languages"
+        }
     }
 }
-

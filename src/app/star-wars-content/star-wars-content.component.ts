@@ -15,8 +15,6 @@ export class StarWarsContentComponent implements OnInit {
   public url = "https://swapi.co/api/people/?search=";
   public userInputPiped;
   public errorMessage: string;
-  public apiResult = [];
-  public th = ["Name:", "Height:", "Mass:", "Hair:", "Skin color:", "Eye color:", "Birth year:", "Gender:"];
   public apiLoaded = false;
 
   constructor(public _StarWars: StarWarsService, private urlPipe: UrlPipe) { }
@@ -27,9 +25,11 @@ export class StarWarsContentComponent implements OnInit {
   }
   set userInput(value: string) {
     this._userInput = value;
+    sessionStorage.setItem('people', JSON.stringify(this._userInput));
   }
 
   ngOnInit() {
+    this.getOperation();
   }
 
   inputChange(event) {
@@ -42,9 +42,18 @@ export class StarWarsContentComponent implements OnInit {
         error: err => this.errorMessage = err
       });
 
-    this.apiResult = this.StarWars.results;
     this.apiLoaded = true;
   }
+
+  getOperation() {
+    if (sessionStorage.getItem('people') === null) {
+      this._userInput = "";
+    }
+    else {
+      this._userInput = JSON.parse(sessionStorage.getItem('people'));
+    }
+  }
+}
 
 
 
@@ -70,4 +79,4 @@ export class StarWarsContentComponent implements OnInit {
       console.log(this.apiResult);
     } */
 
-}
+

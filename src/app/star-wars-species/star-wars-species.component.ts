@@ -16,8 +16,6 @@ export class StarWarsSpeciesComponent implements OnInit {
   public url = "https://swapi.co/api/species/?search=";
   public userInputPiped;
   public errorMessage: string;
-  public apiResult = [];
-  public th = ["Name:", "Classification:", "Designation:", "Average height:", "Skin colors:", "Hair colors:", "Average lifespan:", "Languages:"];
   public apiLoaded = false;
 
   constructor(public _StarWars: StarWarsService, private urlPipe: UrlPipe) { }
@@ -28,9 +26,11 @@ export class StarWarsSpeciesComponent implements OnInit {
   }
   set userInput(value: string) {
     this._userInput = value;
+    sessionStorage.setItem('species', JSON.stringify(this._userInput));
   }
 
   ngOnInit() {
+    this.getOperation();
   }
 
   inputChange(event) {
@@ -40,8 +40,15 @@ export class StarWarsSpeciesComponent implements OnInit {
         next: data => { this.StarWars = data },
         error: err => this.errorMessage = err
       });
+    this.apiLoaded = true;
+  }
 
-      this.apiResult = this.StarWars.results;
-      this.apiLoaded = true;
+  getOperation() {
+    if (sessionStorage.getItem('species') === null) {
+      this._userInput = "";
+    }
+    else {
+      this._userInput = JSON.parse(sessionStorage.getItem('species'));
+    }
   }
 }
